@@ -1,0 +1,63 @@
+.clients-section {
+  padding: 50px;
+  background-color: #0A0A0A;
+}
+
+.clients-columns {
+  display: flex;
+  gap: 30px;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.left-column h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.see-all-btn {
+  padding: 8px 15px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.client-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.small-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.large-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.large-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.small-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.right-column {
+  flex: 3;
+  position: sticky;
+  top: 0;
+}
+
+.slider-client img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
