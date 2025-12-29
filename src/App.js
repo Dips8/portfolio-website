@@ -5,6 +5,9 @@ import Navbar from './components/Navbar';
 import Banner from './components/banner';
 import About from './components/aboutus';
 import Projects from './components/Projects';
+import SkillsSection from './components/SkillsSection';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -20,6 +23,8 @@ function App() {
 
       {/* Projects / Portfolio Section */}
       <Projects />
+       <SkillsSection />
+       <Footer />
     </>
   );
 }

@@ -1,30 +1,33 @@
 import React from "react";
-import "./Banner.css"; // We'll create this CSS file next
+import bannerImg from "../images/portfolio-banner.png"; // <-- correct path
+
+import "./Banner.css";
 
 const Banner = () => {
   return (
-    <section className="banner">
-      {/* Overlay */}
-      <div className="banner-overlay"></div>
+     <section
+      className="modern-banner"
+      style={{ backgroundImage: `url(${bannerImg})` }}
+    >
+      {/* Background Blobs */}
+      <div className="blob blob1"></div>
+      <div className="blob blob2"></div>
+      <div className="blob blob3"></div>
 
       {/* Content */}
-      <div className="banner-content">
-        <div className="banner-left">
-          <h1>
-            Hi, I'm <span className="highlight">Dipak</span>
-          </h1>
-          <h2>Frontend Developer • React Enthusiast • UI Designer</h2>
-          <p>
-            I create visually appealing, high-performing web experiences using modern technologies like React, JavaScript, and CSS.
-          </p>
-          <div className="banner-buttons">
-            <a href="#projects" className="btn btn-primary">
-              View My Work
-            </a>
-            <a href="#contact" className="btn btn-outline">
-              Contact Me
-            </a>
-          </div>
+      <div className="hero-card">
+        <h1 className="hero-title">
+          Crafting <span>Modern</span> Digital Experiences
+        </h1>
+
+        <p className="hero-subtitle">
+          Hi, I'm <strong>Dipak</strong> — a Frontend Developer building
+          pixel-perfect user interfaces with React, animations, and clean UI.
+        </p>
+
+        <div className="hero-buttons">
+          <a href="#projects" className="btn-primary">See Projects</a>
+          <a href="#contact" className="btn-outline">Hire Me</a>
         </div>
       </div>
     </section>

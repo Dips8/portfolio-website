@@ -1,6 +1,6 @@
 .about-section {
   padding: 80px 20px;
-  background-color: #0f172a;
+  background-color: #07101a;
   color: white;
 }
 
@@ -46,6 +46,9 @@
 .highlight {
   color: #ff7f50;
   font-weight: 600;
+}
+img.about-skill {
+    width: 100%;
 }
 
 /* Responsive */
