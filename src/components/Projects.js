@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern UI Website",
+      title: "Modern UI ",
       description: "A stylish modern React website with animations and responsive UI.",
       image: Project1,
       link: "#",
