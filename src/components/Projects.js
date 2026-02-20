@@ -1,5 +1,5 @@
 import React from "react";
-import "./Projects";
+import "./Projects.css";
 import Project1 from "../images/project-1.jpg";
 import Project2 from "../images/project-2.jpg";
 
@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern UI ",
+      title: "Modern UI Website ",
       description: "A stylish modern React website with animations and responsive UI.",
       image: Project1,
       link: "#",
