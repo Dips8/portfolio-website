@@ -1,29 +1,54 @@
 import React from "react";
-import "./AboutUs.css"; // We'll create this CSS file next
-import ProfilePic from "../images/about-dipak.jpg";
+import "./AboutUs.css";
+import AboutImg from "../images/about-me.png";
 
 const About = () => {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-        {/* Left: Image */}
-        <div className="about-left">
-          <img src={ProfilePic} alt="Your Name" className="about-image" />
+
+        {/* LEFT CONTENT */}
+        <div className="about-content">
+          <span className="about-tag">ABOUT ME</span>
+
+          <h2>
+            Passionate <span>Frontend Developer</span><br />
+            Building modern web experiences
+          </h2>
+
+          <p>
+            I’m <strong>Dipak</strong>, a frontend developer focused on creating
+            clean, responsive, and high-performance websites using modern
+            technologies like React and JavaScript.
+          </p>
+
+          <p>
+            I enjoy turning complex problems into simple, beautiful UI solutions
+            and constantly improving my skills.
+          </p>
+
+          {/* STATS */}
+          <div className="about-stats">
+            <div>
+              <h3>1+</h3>
+              <span>Years Experience</span>
+            </div>
+            <div>
+              <h3>10+</h3>
+              <span>Projects Completed</span>
+            </div>
+            <div>
+              <h3>100%</h3>
+              <span>Learning Mindset</span>
+            </div>
+          </div>
         </div>
 
-        {/* Right: Text */}
-        <div className="about-right">
-          <h2>About Me</h2>
-          <p>
-            Hi! I'm <span className="highlight">Your Name</span>, a passionate Frontend Developer specializing in building interactive and visually appealing web experiences using React, JavaScript, and modern web technologies.
-          </p>
-          <p>
-            I love turning ideas into real products and continuously learning new skills to improve my craft. My goal is to deliver high-quality, user-friendly, and responsive websites.
-          </p>
-          <p>
-            Skills: React, JavaScript, HTML5, CSS3, Tailwind CSS, Git, Responsive Design.
-          </p>
+        {/* RIGHT IMAGE */}
+        <div className="about-image-box">
+          <img src={AboutImg} alt="Dipak About" />
         </div>
+
       </div>
     </section>
   );

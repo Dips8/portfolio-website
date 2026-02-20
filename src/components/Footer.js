@@ -15,7 +15,7 @@ export default function Footer() {
     >
       {/* Name */}
       <h2 style={{ marginBottom: "15px", color: "#00eaff" }}>
-        Dipak Mali
+        Dipak Madwani
       </h2>
 
       {/* Tagline */}
@@ -53,7 +53,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <p style={{ marginTop: "25px", opacity: 0.6 }}>
-        © {new Date().getFullYear()} Dipak Mali — All Rights Reserved
+        © {new Date().getFullYear()} Dipak Madwani — All Rights Reserved
       </p>
     </footer>
   );

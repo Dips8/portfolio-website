@@ -1,7 +1,12 @@
 import React from "react";
+import Slider from "react-slick"; // import slider
 import "./Projects.css";
-import Project1 from "../images/project-1.jpg";
-import Project2 from "../images/project-2.jpg";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+import Project1 from "../images/project-1.webp";
+import Project2 from "../images/project-2.png";
+import Project3 from "../images/project-3.jpg";
 
 const Projects = () => {
   const projects = [
@@ -9,33 +14,55 @@ const Projects = () => {
       id: 1,
       title: "Modern UI Website ",
       description: "A stylish modern React website with animations and responsive UI.",
+      title: "Current Power Machinery Website",
+      description: "A fully responsive Shopify website developed for Current Power Machinery, featuring product listings, category navigation, and a clean user-friendly interface optimized for performance and conversions.",
       image: Project1,
-      link: "#",
-      tech: ["React", "CSS", "Animation"],
+      link: "https://currentpowerinc.ca/",
+      tech: ["Shopify", "Liquid", "Responsive Design"],
     },
     {
       id: 2,
-      title: "E-Commerce Store",
-      description: "A fully responsive e-commerce layout with cart features.",
+      title: "VSparkel Website",
+      description: "A responsive business website developed for VSparkel using HTML, Bootstrap, JavaScript, and PHP, featuring interactive UI elements, mobile-friendly design, and dynamic contact form functionality.",
       image: Project2,
       link: "#",
-      tech: ["React", "Context API", "CSS"],
+      tech: ["HTML", "Bootstrap", "JavaScript", "PHP"],
     },
     {
       id: 3,
-      title: "Portfolio Website",
-      description: "A glowing neon style portfolio with smooth transitions.",
-      image: Project1,
+      title: "Marcamor",
+      description: "Designed and developed the company’s official WordPress website, including a fully custom theme and a custom plugin to extend functionality, with a focus on performance, scalability, and responsive design.",
+      image: Project3,
       link: "#",
-      tech: ["React", "Framer Motion"],
+      tech: ["WordPress", "Custom Theme Development", "Plugin Development"],
     },
+    // Add more projects here (4, 5, 6...)
   ];
+
+  // Slider settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // Number of projects to show at a time
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 }
+      },
+      {
+        breakpoint: 768,
+        settings: { slidesToShow: 1 }
+      },
+    ],
+  };
 
   return (
     <section className="projects-section" id="projects">
       <h2 className="projects-title">My Projects</h2>
 
-      <div className="projects-grid">
+      <Slider {...settings} className="projects-slider">
         {projects.map((project) => (
           <div className="project-card" key={project.id}>
             <div className="project-image-container">
@@ -58,7 +85,7 @@ const Projects = () => {
             </div>
           </div>
         ))}
-      </div>
+      </Slider>
     </section>
   );
 };
