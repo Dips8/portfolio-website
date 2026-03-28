@@ -1,60 +1,45 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer 
-      className="footer"
-      style={{
-        background: "#0d0d0d",
-        padding: "40px 20px",
-        color: "#fff",
-        textAlign: "center",
-        borderTop: "1px solid #1f1f1f"
-      }}
-    >
-      {/* Name */}
-      <h2 style={{ marginBottom: "15px", color: "#00eaff" }}>
-        Dipak Madwani
-      </h2>
+    <footer className="footer">
+      <div className="footer-container">
 
-      {/* Tagline */}
-      <p style={{ opacity: "0.8", marginBottom: "20px" }}>
-        Frontend Developer • React | JavaScript | UI/UX
-      </p>
+        {/* Left */}
+        <div className="footer-section">
+          <h2 className="footer-name">Dipak Madwani</h2>
+          <p className="footer-tagline">
+            Frontend Developer • React | JavaScript | UI/UX
+          </p>
+        </div>
 
-      {/* Social Icons */}
-      <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-        <a 
-          href="https://github.com/yourgithub"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#00eaff", fontSize: "1.5rem" }}
-        >
-          <FaGithub />
-        </a>
+        {/* Right Social */}
+        <div className="footer-section footer-social">
+          <h3>Connect</h3>
 
-        <a 
-          href="https://linkedin.com/in/yourlinkedin"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#00eaff", fontSize: "1.5rem" }}
-        >
-          <FaLinkedin />
-        </a>
+          <div className="footer-icons">
+            <a href="https://github.com/yourgithub" target="_blank" rel="noreferrer">
+              <FaGithub />
+            </a>
 
-        <a 
-          href="mailto:yourmail@gmail.com"
-          style={{ color: "#00eaff", fontSize: "1.5rem" }}
-        >
-          <FaEnvelope />
-        </a>
+            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noreferrer">
+              <FaLinkedin />
+            </a>
+
+            <a href="mailto:yourmail@gmail.com">
+              <FaEnvelope />
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      {/* Copyright */}
-      <p style={{ marginTop: "25px", opacity: 0.6 }}>
+      {/* Bottom */}
+      <div className="footer-bottom">
         © {new Date().getFullYear()} Dipak Madwani — All Rights Reserved
-      </p>
+      </div>
     </footer>
   );
 }

@@ -1,35 +1,39 @@
 import React from "react";
-import bannerImg from "../images/portfolio-banner.png"; // <-- correct path
-
+import bannerImg from "../images/portfolio-banner.png";
 import "./Banner.css";
 
 const Banner = () => {
   return (
-     <section
+    <overlay
       className="modern-banner"
       style={{ backgroundImage: `url(${bannerImg})` }}
     >
-      {/* Background Blobs */}
-      <div className="blob blob1"></div>
-      <div className="blob blob2"></div>
-      <div className="blob blob3"></div>
+      <div className="overlay"></div>
 
-      {/* Content */}
-      <div className="hero-card">
+      <div className="hero-container">
         <h1 className="hero-title">
-          Crafting <span>Modern</span> Digital Experiences
+          Hi, I'm <span>Dipak</span> 👋
         </h1>
 
+        <h2 className="hero-role">
+          React Developer & Frontend Specialist
+        </h2>
+
         <p className="hero-subtitle">
-          Hi, I'm <strong>Dipak</strong> — a Web Developer creating high-performance digital solutions with React, PHP, WordPress, Shopify, and clean, user-focused design.
+          I build fast, responsive, and user-friendly websites that help
+          businesses grow and convert visitors into customers.
         </p>
 
         <div className="hero-buttons">
-          <a href="#projects" className="btn-primary">See Projects</a>
-          <a href="#contact" className="btn-outline">Hire Me</a>
+          <a href="#projects" className="btn-primary">
+            View Projects
+          </a>
+          <a href="#contact" className="btn-outline">
+            Hire Me
+          </a>
         </div>
       </div>
-    </section>
+    </overlay>
   );
 };
 

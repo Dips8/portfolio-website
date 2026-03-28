@@ -1,0 +1,97 @@
+/* Navbar */
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 25, 47, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 15px 20px;
+}
+
+/* Container */
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+/* Navbar background */
+.custom-navbar {
+  background-color: #070d13;
+  padding: 15px 0;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-size: 16px;   /* 🔥 bigger text */
+  font-weight: 500;
+  margin-left: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+/* Hover */
+.navbar-nav .nav-link:hover {
+  color: #00c6ff;
+}
+
+/* Contact button */
+.contact-btn {
+  border: 1px solid #00c6ff;
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+.contact-btn:hover {
+  background: #00c6ff;
+  color: #000 !important;
+}
+
+/* Logo spacing */
+.navbar-brand img {
+  height: 45px;
+}
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Hover */
+.nav-links li a:hover {
+  color: #00c6ff;
+}
+
+/* Contact Button */
+.contact-btn {
+  border: 1px solid #00c6ff;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.contact-btn:hover {
+  background: #00c6ff;
+  color: #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
