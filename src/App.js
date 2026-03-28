@@ -4,7 +4,11 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Banner from './components/banner';
 import About from './components/aboutus';
-import Projects from './components/Projects';
+import Projects from './components/projects';
+import Services from './components/Services';
+import Contact from './components/contact';
+
+
 import SkillsSection from './components/SkillsSection';
 import Footer from './components/Footer';
 
@@ -23,7 +27,9 @@ function App() {
 
       {/* Projects / Portfolio Section */}
       <Projects />
-       <SkillsSection />
+      <Services />
+       <Contact />
+       
        <Footer />
     </>
   );

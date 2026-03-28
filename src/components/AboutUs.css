@@ -1,6 +1,6 @@
 .about-section {
   padding: 100px 20px;
-  background: #5C3E41;
+  background:#803c3c;
   color: #fff;
 }
 
@@ -13,29 +13,37 @@
   align-items: center;
 }
 
-/* LEFT CONTENT */
+/* TAG */
 .about-tag {
-  color: #ff7f50;
+  color: #020C1B;
   letter-spacing: 2px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
 }
 
+/* HEADING */
 .about-content h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin: 15px 0 20px;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .about-content h2 span {
-  color: #ff7f50;
+  color: #020C1B;
 }
 
+/* TEXT */
 .about-content p {
-  color: #fff;
+  color: #ccc;
   line-height: 1.7;
   margin-bottom: 15px;
   font-size: 1rem;
+}
+
+/* Highlight line */
+.about-highlight {
+  color: #020C1B;
+  font-weight: 500;
 }
 
 /* STATS */
@@ -47,28 +55,26 @@
 
 .about-stats div h3 {
   font-size: 2rem;
-  color: #ff7f50;
+  color: #020C1B;
 }
 
 .about-stats div span {
   font-size: 0.9rem;
-  color: #fff;
+  color: #aaa;
 }
 
-/* RIGHT IMAGE */
+/* IMAGE */
 .about-image-box {
-  position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .about-image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
 }
 
 .about-image-box:hover img {

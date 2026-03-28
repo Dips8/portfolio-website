@@ -1,72 +1,147 @@
-import React from "react";
-import Slider from "react-slick"; // import slider
-import "./Projects.css";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
+import "./projects.css";
 
 import Project1 from "../images/project-1.webp";
 import Project2 from "../images/project-2.png";
-import Project3 from "../images/project-3.jpg";
+import Project3 from "../images/update-img.jpg";
+import Project4 from "../images/ecolo-store.jpg";
+import Project5 from "../images/project-5.jpg";
+import Project6 from "../images/project-6.jpg";
+import Project7 from "../images/nroot1.webp";
 
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+
   const projects = [
     {
       id: 1,
-      title: "Modern UI Website ",
-      description: "A stylish modern React website with animations and responsive UI.",
-      title: "Current Power Machinery Website",
-      description: "A fully responsive Shopify website developed for Current Power Machinery, featuring product listings, category navigation, and a clean user-friendly interface optimized for performance and conversions.",
+      title: "Current Power Machinery",
+      category: "Shopify",
+      description:
+        "Developed a high-converting Shopify store with optimized UI, fast loading speed, and mobile responsiveness to improve user engagement.",
       image: Project1,
       link: "https://currentpowerinc.ca/",
-      tech: ["Shopify", "Liquid", "Responsive Design"],
+      github: "#",
+      tech: ["Shopify", "Liquid"],
     },
     {
       id: 2,
       title: "VSparkel Website",
-      description: "A responsive business website developed for VSparkel using HTML, Bootstrap, JavaScript, and PHP, featuring interactive UI elements, mobile-friendly design, and dynamic contact form functionality.",
+      category: "PHP",
+      description:
+        "Built a responsive business website with clean UI and structured layout to improve brand presence and usability.",
       image: Project2,
       link: "#",
-      tech: ["HTML", "Bootstrap", "JavaScript", "PHP"],
+      github: "#",
+      tech: ["HTML", "Bootstrap", "PHP"],
     },
     {
       id: 3,
       title: "Marcamor",
-      description: "Designed and developed the company’s official WordPress website, including a fully custom theme and a custom plugin to extend functionality, with a focus on performance, scalability, and responsive design.",
+      category: "React",
+      description:
+        "Created a modern React website with dynamic UI, smooth performance, and scalable architecture for better user experience.",
       image: Project3,
       link: "#",
-      tech: ["WordPress", "Custom Theme Development", "Plugin Development"],
+      github: "#",
+      tech: ["React", "JavaScript", "CSS"],
     },
-    // Add more projects here (4, 5, 6...)
+    {
+      id: 4,
+      title: "Ecolo Store",
+      category: "Shopify",
+      description:
+        "Designed a clean and modern eCommerce store focused on user experience and conversion optimization.",
+      image: Project4,
+      link: "https://www.ecolo.store/",
+      github: "#",
+      tech: ["Shopify"],
+    },
+    {
+      id: 5,
+      title: "Bonnie & Pop",
+      category: "Shopify",
+      description:
+        "Optimized an eCommerce website for better conversions, faster load time, and improved UI.",
+      image: Project5,
+      link: "https://www.bonnieandpop.com/",
+      github: "#",
+      tech: ["Shopify"],
+    },
+    {
+      id: 6,
+      title: "Inamdar Hospital",
+      category: "WordPress",
+      description:
+        "Developed a responsive healthcare website with improved accessibility and structured content layout.",
+      image: Project6,
+      link: "https://inamdarhospital.com/",
+      github: "#",
+      tech: ["WordPress"],
+    },
+    {
+      id: 7,
+      title: "Nroot Foods",
+      category: "Shopify",
+      description:
+        "Built a responsive eCommerce store with clean UI and mobile-first design approach.",
+      image: Project7,
+      link: "#",
+      github: "#",
+      tech: ["Shopify"],
+    },
   ];
 
-  // Slider settings
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Number of projects to show at a time
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1 }
-      },
-    ],
-  };
+  const filters = ["All", "React", "Shopify", "WordPress", "PHP"];
+
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
 
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">My Projects</h2>
+      <h2 className="projects-title">Featured Projects</h2>
 
-      <Slider {...settings} className="projects-slider">
-        {projects.map((project) => (
+      <p className="projects-subtitle">
+        Here are some of my recent works focused on performance, design, and real-world results.
+      </p>
+
+      {/* Filters */}
+      <div className="filter-buttons">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            className={activeFilter === filter ? "active" : ""}
+            onClick={() => setActiveFilter(filter)}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
+      {/* Grid */}
+      <div className="projects-grid">
+        {filteredProjects.map((project) => (
           <div className="project-card" key={project.id}>
+            
             <div className="project-image-container">
-              <img src={project.image} alt={project.title} className="project-image" />
+              <span className="category">{project.category}</span>
+
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
+
+              <div className="overlay">
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  Live
+                </a>
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  Code
+                </a>
+              </div>
             </div>
 
             <div className="project-content">
@@ -74,18 +149,15 @@ const Projects = () => {
               <p>{project.description}</p>
 
               <div className="tech-badges">
-                {project.tech.map((t, index) => (
-                  <span key={index} className="badge">{t}</span>
+                {project.tech.map((t, i) => (
+                  <span key={i}>{t}</span>
                 ))}
               </div>
-
-              <a href={project.link} className="btn-project" target="_blank" rel="noreferrer">
-                View Project →
-              </a>
             </div>
+
           </div>
         ))}
-      </Slider>
+      </div>
     </section>
   );
 };

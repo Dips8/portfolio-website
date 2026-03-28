@@ -21,8 +21,7 @@ const Banner = () => {
         </h1>
 
         <p className="hero-subtitle">
-          Hi, I'm <strong>Dipak</strong> — a Frontend Developer building
-          pixel-perfect user interfaces with React, animations, and clean UI.
+          Hi, I'm <strong>Dipak</strong> — a Web Developer creating high-performance digital solutions with React, PHP, WordPress, Shopify, and clean, user-focused design.
         </p>
 
         <div className="hero-buttons">

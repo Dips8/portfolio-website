@@ -12,41 +12,44 @@ const About = () => {
           <span className="about-tag">ABOUT ME</span>
 
           <h2>
-            Passionate <span>Frontend Developer</span><br />
-            Building modern web experiences
+            Turning Ideas into <span>Powerful Web Experiences</span>
           </h2>
 
           <p>
-            I’m <strong>Dipak</strong>, a frontend developer focused on creating
-            clean, responsive, and high-performance websites using modern
-            technologies like React and JavaScript.
+            I'm Dipak, a frontend developer specializing in React and modern web technologies.
+            I help businesses build fast, responsive, and user-friendly websites that improve
+            user experience and drive real results.
           </p>
 
           <p>
-            I enjoy turning complex problems into simple, beautiful UI solutions
-            and constantly improving my skills.
+            With hands-on experience in React, WordPress, Shopify, and PHP, I focus on creating
+            clean UI, scalable solutions, and performance-driven applications.
+          </p>
+
+          <p className="about-highlight">
+            I’m always learning, improving, and adapting to the latest technologies to deliver better results.
           </p>
 
           {/* STATS */}
           <div className="about-stats">
             <div>
-              <h3>1+</h3>
+              <h3>3+</h3>
               <span>Years Experience</span>
             </div>
             <div>
-              <h3>10+</h3>
+              <h3>30+</h3>
               <span>Projects Completed</span>
             </div>
             <div>
               <h3>100%</h3>
-              <span>Learning Mindset</span>
+              <span>Client Satisfaction</span>
             </div>
           </div>
         </div>
 
         {/* RIGHT IMAGE */}
         <div className="about-image-box">
-          <img src={AboutImg} alt="Dipak About" />
+          <img src={AboutImg} alt="About Dipak" />
         </div>
 
       </div>
