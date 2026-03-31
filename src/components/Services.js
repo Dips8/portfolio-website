@@ -30,7 +30,7 @@ const Services = () => {
       <h2 className="services-title">My Services</h2>
 
       <p className="services-subtitle">
-        I help businesses build modern, high-performance websites and digital solutions.
+      I provide modern web solutions that help businesses grow, improve performance, and increase conversions.
       </p>
 
       <div className="services-grid">

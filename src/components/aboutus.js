@@ -16,9 +16,7 @@ const About = () => {
           </h2>
 
           <p>
-            I'm Dipak, a frontend developer specializing in React and modern web technologies.
-            I help businesses build fast, responsive, and user-friendly websites that improve
-            user experience and drive real results.
+           I'm Dipak, a React Developer specializing in building fast, scalable, and user-focused web applications.
           </p>
 
           <p>

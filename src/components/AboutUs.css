@@ -1,9 +1,10 @@
 .about-section {
   padding: 100px 20px;
-  background:#803c3c;
+  background: #0a192f; /* FIXED theme */
   color: #fff;
 }
 
+/* Layout */
 .about-container {
   max-width: 1200px;
   margin: auto;
@@ -13,15 +14,15 @@
   align-items: center;
 }
 
-/* TAG */
+/* Tag */
 .about-tag {
-  color: #020C1B;
+  color: #00c6ff;
   letter-spacing: 2px;
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-/* HEADING */
+/* Heading */
 .about-content h2 {
   font-size: 2.5rem;
   margin: 15px 0 20px;
@@ -29,45 +30,61 @@
 }
 
 .about-content h2 span {
-  color: #020C1B;
+  color: #00c6ff;
 }
 
-/* TEXT */
+/* Text */
 .about-content p {
-  color: #ccc;
+  color: #a8b2d1;
   line-height: 1.7;
   margin-bottom: 15px;
   font-size: 1rem;
 }
 
-/* Highlight line */
+/* Highlight */
 .about-highlight {
-  color: #020C1B;
+  color: #ccd6f6;
   font-weight: 500;
 }
 
-/* STATS */
+/* Stats (modern cards) */
 .about-stats {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
-.about-stats div h3 {
-  font-size: 2rem;
-  color: #020C1B;
+.about-stats div {
+  background: #112240;
+  padding: 20px;
+  border-radius: 12px;
+  min-width: 120px;
+  text-align: center;
+  transition: 0.3s;
 }
 
-.about-stats div span {
-  font-size: 0.9rem;
-  color: #aaa;
+.about-stats div:hover {
+  transform: translateY(-5px);
+  background: #1c2e4a;
 }
 
-/* IMAGE */
+.about-stats h3 {
+  font-size: 1.8rem;
+  color: #00c6ff;
+}
+
+.about-stats span {
+  font-size: 0.85rem;
+  color: #8892b0;
+}
+
+/* Image */
 .about-image-box {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .about-image-box img {
@@ -81,7 +98,15 @@
   transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+/* Optional glow effect */
+.about-image-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+
+/* Responsive */
 @media (max-width: 900px) {
   .about-container {
     grid-template-columns: 1fr;
@@ -90,6 +115,5 @@
 
   .about-stats {
     justify-content: center;
-    flex-wrap: wrap;
   }
 }

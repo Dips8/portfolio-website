@@ -4,13 +4,11 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <overlay
+    <section
       className="modern-banner"
       style={{ backgroundImage: `url(${bannerImg})` }}
     >
-      <div className="overlay"></div>
-
-      <div className="hero-container">
+      <div className="hero-card">
         <h1 className="hero-title">
           Hi, I'm <span>Dipak</span> 👋
         </h1>
@@ -20,8 +18,7 @@ const Banner = () => {
         </h2>
 
         <p className="hero-subtitle">
-          I build fast, responsive, and user-friendly websites that help
-          businesses grow and convert visitors into customers.
+          I build fast, modern, and high-converting websites that help businesses grow.
         </p>
 
         <div className="hero-buttons">
@@ -33,7 +30,7 @@ const Banner = () => {
           </a>
         </div>
       </div>
-    </overlay>
+    </section>
   );
 };
 
