@@ -3,7 +3,7 @@ import "./contact.css";
 
 const Contact = () => {
 
-  // ✅ ADD THIS FUNCTION
+  // ✅ Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -14,21 +14,21 @@ const Contact = () => {
     };
 
     try {
-      const res = await fetch("https://portfolio-backend-zav4.onrender.com/send-mail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: formData.email,
-          payment_id: formData.message, // temporary
-        }),
-      });
+      const res = await fetch(
+        "https://portfolio-backend-zav4.onrender.com/send-mail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData), // send all fields correctly
+        }
+      );
 
       const data = await res.text();
       alert("Message Sent ✅");
 
-      // ✅ Clear form after submit
+      // Clear form after submit
       e.target.reset();
 
     } catch (error) {
