@@ -15,7 +15,7 @@ const Contact = () => {
     ).then(
       (result) => {
         console.log(result.text);
-        alert("Message Sent ✅");
+      alert("WORKING NEW CODE 🚀");
         e.target.reset();
       },
       (error) => {
