@@ -1,50 +1,36 @@
 import React from "react";
 import "./contact.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
 
-  // ✅ Handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      message: e.target.message.value,
-    };
-
-    try {
-      const res = await fetch(
-        "https://portfolio-backend-zav4.onrender.com/send-mail",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData), // send all fields correctly
-        }
-      );
-
-      const data = await res.text();
-      alert("Message Sent ✅");
-
-      // Clear form after submit
-      e.target.reset();
-
-    } catch (error) {
-      alert("Error sending message ❌");
-      console.log(error);
-    }
+    emailjs.sendForm(
+      "service_v5ke6ms",   // 🔴 replace
+      "template_1aptrf3",  // 🔴 replace
+      e.target,
+      "Ri-czyzAomyCGtwcE"    // 🔴 replace
+    ).then(
+      (result) => {
+        console.log(result.text);
+        alert("Message Sent ✅");
+        e.target.reset();
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Error sending message ❌");
+      }
+    );
   };
 
   return (
     <section className="contact-section" id="contact">
       <div className="contact-wrapper">
 
-        {/* LEFT SIDE */}
         <div className="contact-left">
           <h2>Let’s Work Together 🚀</h2>
-
           <p>
             Have a project in mind or need a website?  
             I’m available for freelance and full-time opportunities.
@@ -66,14 +52,8 @@ const Contact = () => {
               <p>India</p>
             </div>
           </div>
-
-          <div className="contact-socials">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
         </div>
 
-        {/* RIGHT SIDE FORM */}
         <div className="contact-right">
           <form className="contact-form" onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Your Name" required />
