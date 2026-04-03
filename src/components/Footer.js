@@ -20,15 +20,15 @@ export default function Footer() {
           <h3>Connect</h3>
 
           <div className="footer-icons">
-            <a href="https://github.com/yourgithub" target="_blank" rel="noreferrer">
+            <a href="https://github.com/Dips8" target="_blank" rel="noreferrer">
               <FaGithub />
             </a>
 
-            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noreferrer">
+            <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">
               <FaLinkedin />
             </a>
 
-            <a href="mailto:yourmail@gmail.com">
+            <a href="mailto:dipakmadwani1234@gmail.com">
               <FaEnvelope />
             </a>
           </div>

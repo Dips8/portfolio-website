@@ -39,12 +39,12 @@ const Contact = () => {
           <div className="contact-cards">
             <div className="contact-card">
               <span>📧</span>
-              <p>yourmail@gmail.com</p>
+              <p>dipakmadwani1234@gmail.com</p>
             </div>
 
             <div className="contact-card">
               <span>📱</span>
-              <p>+91 XXXXX XXXXX</p>
+              <p>+91 8857020697</p>
             </div>
 
             <div className="contact-card">

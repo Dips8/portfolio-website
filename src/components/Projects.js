@@ -8,7 +8,7 @@ import Project4 from "../images/ecolo-store.jpg";
 import Project5 from "../images/project-5.jpg";
 import Project6 from "../images/project-6.jpg";
 import Project7 from "../images/nroot1.webp";
-
+import Project8 from "../images/project8.jpg";
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -21,7 +21,6 @@ const Projects = () => {
         "Developed a high-converting Shopify store with optimized UI, fast loading speed, and mobile responsiveness to improve user engagement.",
       image: Project1,
       link: "https://currentpowerinc.ca/",
-      github: "#",
       tech: ["Shopify", "Liquid"],
     },
     {
@@ -31,8 +30,7 @@ const Projects = () => {
       description:
         "Built a responsive business website with clean UI and structured layout to improve brand presence and usability.",
       image: Project2,
-      link: "#",
-      github: "#",
+      link: "https://www.vsparkel.com/",
       tech: ["HTML", "Bootstrap", "PHP"],
     },
     {
@@ -42,8 +40,7 @@ const Projects = () => {
       description:
         "Created a modern React website with dynamic UI, smooth performance, and scalable architecture for better user experience.",
       image: Project3,
-      link: "#",
-      github: "#",
+      link: "https://marcamor.com/",
       tech: ["React", "JavaScript", "CSS"],
     },
     {
@@ -54,7 +51,7 @@ const Projects = () => {
         "Designed a clean and modern eCommerce store focused on user experience and conversion optimization.",
       image: Project4,
       link: "https://www.ecolo.store/",
-      github: "#",
+      
       tech: ["Shopify"],
     },
     {
@@ -65,7 +62,7 @@ const Projects = () => {
         "Optimized an eCommerce website for better conversions, faster load time, and improved UI.",
       image: Project5,
       link: "https://www.bonnieandpop.com/",
-      github: "#",
+     
       tech: ["Shopify"],
     },
     {
@@ -76,7 +73,7 @@ const Projects = () => {
         "Developed a responsive healthcare website with improved accessibility and structured content layout.",
       image: Project6,
       link: "https://inamdarhospital.com/",
-      github: "#",
+    
       tech: ["WordPress"],
     },
     {
@@ -86,9 +83,20 @@ const Projects = () => {
       description:
         "Built a responsive eCommerce store with clean UI and mobile-first design approach.",
       image: Project7,
-      link: "#",
-      github: "#",
+      link: "https://nrootfoods.com/",
+    
       tech: ["Shopify"],
+    },
+     {
+      id: 8,
+      title: "Doctor Eye Institute",
+      category: "WordPress",
+      description:
+        "Built a responsive eCommerce store with clean UI and mobile-first design approach.",
+      image: Project8,
+      link: "https://doctoreyeinstitute.com/",
+    
+      tech: ["wordpress"],
     },
   ];
 
@@ -138,9 +146,7 @@ const Projects = () => {
                 <a href={project.link} target="_blank" rel="noreferrer">
                   Live
                 </a>
-                <a href={project.github} target="_blank" rel="noreferrer">
-                  Code
-                </a>
+               
               </div>
             </div>
 

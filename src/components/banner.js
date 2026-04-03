@@ -14,11 +14,11 @@ const Banner = () => {
         </h1>
 
         <h2 className="hero-role">
-          React Developer & Frontend Specialist
+         Web Developer & Frontend Specialist
         </h2>
 
         <p className="hero-subtitle">
-          I build fast, modern, and high-converting websites that help businesses grow.
+         I build fast, modern, and high-converting websites for businesses and startups.
         </p>
 
         <div className="hero-buttons">
